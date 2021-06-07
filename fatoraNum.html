@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>fatora números</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="fatoraNum.css">
+	<style type="text/css">
+	* {
+			font-family: sans-serif;
+}
+
+body {
+ background-color: rgb(180,190,200);
+}
+
+input {
+	color: snow;
+	background-color: transparent;
+	width: 20%;
+	margin: auto;
+	text-indent: 3px;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1.5px solid white;
+	border-radius: 5%;
+}
+
+input:hover {
+	background-color: rgba(222,222,222, 0.1);
+
+}
+button {
+	background-color: white;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1.5px solid white;
+}
+button:hover {
+	background-color: rgba(22,22,22, 0.5);
+}
+
+div#corpo {
+	color: snow;
+	background: linear-gradient(90deg, rgba(88,10,149,1) 15%, rgba(98,23,232,1) 53%, rgba(159,76,0,1) 100%);
+	border-top: 1.8px solid white;
+	border-left: 1.8px solid white;
+	border-right: 1.8px solid white;
+	border-bottom: 1.8px solid white;
+	padding: 15px 15px 45px 15px;
+	margin: auto;
+	max-width: 550px;
+	min-width: auto;
+}
+div#res {
+	margin-top: 5%;
+}
+h1 {
+	color: snow;
+	margin-top: 0px;
+	font-size: 2em;
+}
+	</style>
+</head>
+<body>
+		
+		<div id="corpo">
+			<h1>Fatorador de números</h1>
+			<input type="Number" id="inpNum">!
+			<button onclick="fatorar()">fatorar</button>
+			<div id="res"></div>
+		</div>
+<script type="text/javascript">
+	function fatorar() {
+const res = window.document.getElementById('res')
+var numero = window.document.getElementById('inpNum')
+var num = numero.value
+var a = num
+var i = ''
+ if (num == 0 || num < 1) { alert("digite um número válido para fatorar")} else {
+ for (i = Number(num-1); i !== 0 ; i--) {
+ 	a = Number(a*i) + ' '
+ }
+res.innerHTML = a
+numero.focus()
+}
+}
+/*10*9*8*7*6*5*4*3*2*1*/
+//FUNCIONANDO!!
+</script>
+</body>
+</html>
